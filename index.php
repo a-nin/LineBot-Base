@@ -10,7 +10,7 @@ $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient(getenv('CHANNEL_ACCESS
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => getenv('CHANNEL_SECRET')]);
 
 // LINE Messaging APIがリクエストに付与した署名を取得
-$signature = $_SERVER['HTTP_' . \LINE\LINEBot\constant\HTTPHeader::LINE_SIGNATURE];
+$signature = $_SERVER['HTTP_' . \LINE\LINEBot\Constant\HTTPHeader::LINE_SIGNATURE];
 
 // 署名が妥当かチェック。妥当であればリクエストをパースし配列へ
 // 不正であれば例外の内容を出力
